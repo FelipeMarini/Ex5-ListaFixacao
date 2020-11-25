@@ -7,28 +7,42 @@ namespace Ex5_ListaFixacao
         static void Main(string[] args)
         {
 
-            int[] numeros = new int [10];
+            int num = 0;
             int resultado = 0;
 
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("Please type a number from 1 to 10 to know its multiplication table:\n ");
-            int num = int.Parse(Console.ReadLine());
+            Console.WriteLine("Here are the multiplication tables of numbers 1 until 10:\n ");
+            Console.ResetColor();
             Console.WriteLine();
 
                 
-                for (int i = 0; i <= 10; i++)
-                
-                {
+                for (int k = 1; k <= 10; k++) {
                     
-                    resultado = i * num;
-                    Console.WriteLine($"{i} x {num} = {resultado}"); 
+                        num = k;
 
+                        Console.WriteLine("------------------------------------------");                    
+                    
+                    
+                    for (int i = 0; i <= 10; i++)
+                    {
 
+                        Console.WriteLine();
+                        
+                        resultado = i * num;
+
+                        Console.ForegroundColor = ConsoleColor.Green;
+
+                        Console.WriteLine($"{i} x {num} = {resultado}"); 
+
+                        Console.ResetColor();
+
+                    }
+                
                 }
-            
-        
         }          
     }
 }
+                    
     
+            
